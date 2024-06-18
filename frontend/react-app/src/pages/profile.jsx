@@ -17,7 +17,7 @@ const ProfilePage = () => {
       try {
         const token = localStorage.getItem('token');
         if (token) {
-          const response = await axios.get('http://localhost:8000/api/users/profile/', {
+          const response = await axios.get('http://34.41.183.238:8000/api/users/profile/', {
             headers: { Authorization: `Token ${token}` }
           });
           setUser(response.data);
@@ -45,7 +45,7 @@ const ProfilePage = () => {
           formData.append('image', updatedData.image);
         }
 
-        const response = await axios.put('http://localhost:8000/api/users/profile/update/', formData, {
+        const response = await axios.put('http://34.41.183.238:8000/api/users/profile/update/', formData, {
           headers: {
             Authorization: `Token ${token}`,
             'Content-Type': 'multipart/form-data',

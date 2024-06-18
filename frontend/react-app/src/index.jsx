@@ -21,7 +21,7 @@ const App = () => {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await axios.get('http://localhost:8000/api/users/login-status/', {
+                    const response = await axios.get('http://34.41.183.238:8000/api/users/login-status/', {
                         headers: { Authorization: `Token ${token}` }
                     });
                     if (response.status === 200) {

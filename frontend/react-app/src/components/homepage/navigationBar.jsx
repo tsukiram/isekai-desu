@@ -18,7 +18,7 @@ const NavigationBar = ({ isLoggedIn, setIsLoggedIn }) => {
             try {
                 const token = localStorage.getItem('token');
                 if (token) {
-                    const response = await axios.get('http://localhost:8000/api/users/profile/', {
+                    const response = await axios.get('http://34.41.183.238:8000/api/users/profile/', {
                         headers: { Authorization: `Token ${token}` }
                     });
                     setUserProfile(response.data);
@@ -37,7 +37,7 @@ const NavigationBar = ({ isLoggedIn, setIsLoggedIn }) => {
         try {
             const token = localStorage.getItem('token');
             if (token) {
-                const response = await axios.post('http://localhost:8000/api/users/logout/', null, {
+                const response = await axios.post('http://34.41.183.238:8000/api/users/logout/', null, {
                     headers: { Authorization: `Token ${token}` }
                 });
                 localStorage.removeItem('token');
