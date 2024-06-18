@@ -12,7 +12,7 @@ function CardBookApp({ recommendCards, cards, handleTabChange, activeTab }) {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/categories/");
+      const response = await axios.get("https://tsukirama.pythonanywhere.com/api/categories/");
       const categories = response.data.map(cat => cat.name.toLowerCase());
       setCategories(["all", ...categories]);
     } catch (error) {

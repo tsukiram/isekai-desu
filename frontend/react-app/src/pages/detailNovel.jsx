@@ -13,7 +13,7 @@ const DetailNovel = () => {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
-            axios.get('http://localhost:8000/api/users/profile/', {
+            axios.get('https://tsukirama.pythonanywhere.com/api/users/profile/', {
                 headers: { Authorization: `Token ${token}` }
             }).then(response => {
                 setUserProfile(response.data);

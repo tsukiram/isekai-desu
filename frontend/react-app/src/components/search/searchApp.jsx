@@ -22,7 +22,7 @@ class SearchApp extends Component {
 
   async fetchData() {
     try {
-      const response = await axios.get("http://localhost:8000/api/posts/");
+      const response = await axios.get("https://tsukirama.pythonanywhere.com/api/posts/");
       this.setState({
         cards: response.data,
         recommendCards: response.data,

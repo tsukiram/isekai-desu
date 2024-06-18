@@ -15,7 +15,7 @@ const ForgotPasswordForm = () => {
 
    const forgotPasswordUser = async (values) => {
        try {
-           const response = await axios.post('http://localhost:8000/api/users/forgot-password/', {
+           const response = await axios.post('https://tsukirama.pythonanywhere.com/api/users/forgot-password/', {
                email: values.email,
                username: values.username
            });

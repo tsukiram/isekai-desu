@@ -25,7 +25,7 @@ const DetailNovelContent = () => {
 
     const fetchPost = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/posts/${id}/`);
+            const response = await axios.get(`https://tsukirama.pythonanywhere.com/api/posts/${id}/`);
             setPost(response.data);
         } catch (error) {
             console.error("There was an error fetching the post!", error);
@@ -34,7 +34,7 @@ const DetailNovelContent = () => {
 
     const fetchComments = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/posts/${id}/comments/`);
+            const response = await axios.get(`https://tsukirama.pythonanywhere.com/api/posts/${id}/comments/`);
             setComments(response.data);
         } catch (error) {
             console.error("There was an error fetching the comments!", error);
@@ -46,7 +46,7 @@ const DetailNovelContent = () => {
             const token = localStorage.getItem('token');
             if (!token) return;
 
-            const response = await axios.get(`http://localhost:8000/api/users/profile/`, {
+            const response = await axios.get(`https://tsukirama.pythonanywhere.com/api/users/profile/`, {
                 headers: { Authorization: `Token ${token}` }
             });
             setCurrentUser(response.data);
@@ -60,7 +60,7 @@ const DetailNovelContent = () => {
             const token = localStorage.getItem('token');
             if (!token) return;
 
-            const response = await axios.get(`http://localhost:8000/api/favorite/list/`, {
+            const response = await axios.get(`https://tsukirama.pythonanywhere.com/api/favorite/list/`, {
                 headers: { Authorization: `Token ${token}` }
             });
             const favoritePosts = response.data;
@@ -78,7 +78,7 @@ const DetailNovelContent = () => {
                 return;
             }
 
-            const response = await axios.post('http://localhost:8000/api/favorite/toggle/', 
+            const response = await axios.post('https://tsukirama.pythonanywhere.com/api/favorite/toggle/', 
             { post_id: id }, 
             { headers: { Authorization: `Token ${token}` } });
 
@@ -101,7 +101,7 @@ const DetailNovelContent = () => {
         if (newComment.trim()) {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.post(`http://localhost:8000/api/comments/create/`, {
+                const response = await axios.post(`https://tsukirama.pythonanywhere.com/api/comments/create/`, {
                     post: id,
                     content: newComment,
                 }, {
@@ -124,7 +124,7 @@ const DetailNovelContent = () => {
     const confirmDelete = async () => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:8000/api/comments/${commentToDelete.id}/delete/`, {
+            await axios.delete(`https://tsukirama.pythonanywhere.com/api/comments/${commentToDelete.id}/delete/`, {
                 headers: { Authorization: `Token ${token}` }
             });
             setComments(comments.filter(comment => comment.id !== commentToDelete.id));
@@ -143,7 +143,7 @@ const DetailNovelContent = () => {
     const handleDeletePost = async () => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:8000/api/posts/${id}/delete/`, {
+            await axios.delete(`https://tsukirama.pythonanywhere.com/api/posts/${id}/delete/`, {
                 headers: { Authorization: `Token ${token}` }
             });
             navigate('/');

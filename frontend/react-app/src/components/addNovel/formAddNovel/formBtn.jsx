@@ -31,7 +31,7 @@ function FormBtn() {
         const token = localStorage.getItem('token');
         console.log("token:", token);
 
-        const response = await axios.post('http://localhost:8000/api/post/create/', formData, {
+        const response = await axios.post('https://tsukirama.pythonanywhere.com/api/post/create/', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             'Authorization': `Token ${token}`, // Make sure to use 'Token' instead of 'Bearer'

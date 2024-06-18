@@ -33,7 +33,7 @@ const LoginForm = () => {
         },
         onSubmit: async (values) => {
             try {
-                const response = await axios.post('http://localhost:8000/api/users/login/', {
+                const response = await axios.post('https://tsukirama.pythonanywhere.com/api/users/login/', {
                     username: values.username,
                     password: values.password
                 });

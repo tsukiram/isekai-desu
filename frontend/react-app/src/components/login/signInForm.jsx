@@ -19,7 +19,7 @@ const SignInForm = () => {
 
     const registerUser = async (values) => {
         try {
-            const response = await axios.post('http://localhost:8000/api/users/register/', values);
+            const response = await axios.post('https://tsukirama.pythonanywhere.com/api/users/register/', values);
             setShowModal(true);
         } catch (error) {
             console.error("There was an error registering the user!", error);
