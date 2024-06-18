@@ -10,7 +10,7 @@ const AddNovel = () => {
    useEffect(() => {
        const token = localStorage.getItem('token');
        if (token) {
-           axios.get('http://34.41.183.238:8000/api/users/profile/', {
+           axios.get('http://localhost:8000/api/users/profile/', {
                headers: { Authorization: `Token ${token}` }
            }).then(response => {
                setUserProfile(response.data);

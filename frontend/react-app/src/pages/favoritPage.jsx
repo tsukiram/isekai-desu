@@ -23,7 +23,7 @@ const FavoritesPage = () => {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
-            axios.get('http://34.41.183.238:8000/api/users/profile/', {
+            axios.get('http://localhost:8000/api/users/profile/', {
                 headers: { Authorization: `Token ${token}` }
             })
             .then(response => {
@@ -41,7 +41,7 @@ const FavoritesPage = () => {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await axios.get('http://34.41.183.238:8000/api/favorite/list/', {
+                    const response = await axios.get('http://localhost:8000/api/favorite/list/', {
                         headers: { Authorization: `Token ${token}` }
                     });
                     setFavoriteNovels(response.data);
@@ -59,7 +59,7 @@ const FavoritesPage = () => {
         if (token) {
             try {
                 await axios.post(
-                    'http://34.41.183.238:8000/api/favorite/toggle/',
+                    'http://localhost:8000/api/favorite/toggle/',
                     { post_id: id },
                     { headers: { Authorization: `Token ${token}` } }
                 );

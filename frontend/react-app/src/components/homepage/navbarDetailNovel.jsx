@@ -16,7 +16,7 @@ const NavigationBar = ({ isLoggedIn, setIsLoggedIn, userProfile }) => {
         try {
             const token = localStorage.getItem('token');
             if (token) {
-                await axios.post('http://34.41.183.238:8000/api/users/logout/', null, {
+                await axios.post('http://localhost:8000/api/users/logout/', null, {
                     headers: { Authorization: `Token ${token}` }
                 });
                 localStorage.removeItem('token');

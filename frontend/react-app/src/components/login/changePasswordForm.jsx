@@ -16,7 +16,7 @@ const ChangePasswordForm = () => {
 
     const resetPasswordUser = async (values) => {
         try {
-            const response = await axios.post(`http://34.41.183.238:8000/api/users/reset-password/${uidb64}/${token}/`, {
+            const response = await axios.post(`http://localhost:8000/api/users/reset-password/${uidb64}/${token}/`, {
                 password: values.password,
                 password_confirm: values.confirmPassword
             });
