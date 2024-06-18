@@ -1,0 +1,169 @@
+* {
+    font-family: "Plus Jakarta Sans";
+}
+
+/* Login Page */
+.containerLogin {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #EBFFFF;
+    overflow: hidden;
+}
+
+.containerRow {
+    display: flex;
+    padding: 0;
+}
+
+/* Carousel */
+.carouselLogin {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.gambarPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.gambarCarousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 180px;
+}
+
+.carouselCaption {
+    padding-top: 200px;
+}
+
+
+/* Login Form */
+.loginForm {
+    background-color: #FFFFFF;
+    height: 100vh;
+    padding: 80px;
+    padding-top: 40px;
+}
+
+.loginForm h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.forgetPass {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+.loginForm button {
+    width: 100%;
+}
+
+.logoKorpus {
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.otherMethod {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.loginViaGoogle a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginViaGoogle a p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.googleLogo {
+    padding-right: 8px;
+}
+
+.punyaAkun {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.linkTo {
+    color: #243036;
+    align-items: center;
+}
+
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: right;
+}
+
+.password-toggle-text {
+    margin-left: auto;
+    font-size: 0.875rem;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0 10px;
+    white-space: nowrap;
+    justify-content: right;
+}
+
+
+
+/* Modal */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+.modal-body {
+   padding: 20px;
+}
+  
+.modal-footer {
+    justify-content: center;
+}
+
+@media only screen and (max-width: 772px) {
+    .carouselLogin {
+        height: fit-content;
+        margin-top: 40px;
+    }
+}
+  
+@media only screen and (max-width: 576px) {
+    .gambarCarousel {
+        width: 320px;
+        height: 312px;
+    }
+}

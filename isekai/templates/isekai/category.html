@@ -1,0 +1,14 @@
+<div class="col-md-4">
+    <div class="content-section">
+      <h3>Category</h3>
+      <p class='text-muted'>
+          <ul class="list-group">
+            {% for category in categories %}
+              <li class="list-group-item list-group-item-light">
+                  <a href="{% url 'category-post' category.name %}">{{ category.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+      </p>
+    </div>
+  </div>

@@ -1,0 +1,84 @@
+{% extends "isekai/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    {% include 'isekai/modals/delete_post_confirm.html' %}
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="{% url 'user-post' object.author.username %}">{{ object.author }}</a>
+                <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+                {% if object.author == user %}
+                    <div>
+                        <a class="btn btn-outline-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}"> Update post</a>
+                        <a class="btn btn-outline-danger btn-sm mt-1 mb-1" data-toggle="modal" data-target="#deletePostModal"> Delete post</a>
+                    </div> 
+                {% endif %}            
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                  <h2 class="mb-1">
+                      <a class="article-title" href="{% url 'post-detail' object.pk %}">{{ object.title }}</a>
+                  </h2>
+              </div>
+              <div class="col-md-4">
+                  {% if user.is_authenticated %}
+                      {% if is_favorite %}
+                          <form action="{% url 'remove-from-favorites' object.pk %}" method="post">
+                              {% csrf_token %}
+                              <button class="btn btn-danger btn-sm float-right mb-1" type="submit">Remove from favorite</button>
+                          </form>
+                      {% else %}
+                          <form action="{% url 'add-to-favorites' object.pk %}" method="post">
+                              {% csrf_token %}
+                              <button class="btn btn-sm float-right mb-1" type="submit">Add to Favorites</button>
+                          </form>
+                      {% endif %}
+                  {% endif %}
+              </div>
+          </div>          
+            {% if object.cover_image %}
+                <img src="{{ object.cover_image.url }}" class="img-fluid mb-4" alt="{{ object.title }}">
+            {% endif %}
+            <p class="article-content" >{{ object.category }}</p>
+            <p class="article-content">{{ object.content }}</p>
+          
+            
+            <!-- Daftar Komentar -->
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <ul class="list-unstyled">
+                  {% for comment in object.comments.all %}
+                      <li class="mb-2">
+                          <small class="text-muted">{{ comment.user.username }} - {{ comment.created_at }}
+                            {% if comment.user == user %}
+                                <a href="{% url 'comment-update' comment.id %}">Edit</a>
+                                <a href="#" class="delete-comment-btn" data-toggle="modal" data-target="#deleteCommentModal{{ comment.id }}">Delete</a>
+                            {% endif %}
+                          </small>
+                          <p class="mb-1">{{ comment.content }}</p>
+                          <!-- Include delete comment modal -->
+                          {% include 'isekai/modals/delete_comment_modal.html' %}
+                      </li>
+                  {% empty %}
+                      <li>No comments yet.</li>
+                  {% endfor %}
+                </ul>
+              
+                <form method="post" action="">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <label for="comment">Add a comment:</label>
+                      <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                  </div>
+                  {% if user.is_authenticated %}
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  {% else %}
+                    <p class="text-danger">You need to <a href="{% url 'login' %}">login</a> first to comment.</p>
+                  {% endif %}
+                </form>
+
+            </div>
+        </div>
+    </article>
+{% endblock content %}

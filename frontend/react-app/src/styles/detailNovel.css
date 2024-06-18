@@ -1,0 +1,297 @@
+.detailNovelClass {
+    margin: 0px 80px;
+    margin-top: 40px;
+    background-color: #EBFFFF;
+}
+
+.detailNovelContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.Left-Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    width: auto;
+}
+
+.category-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-book__tagline {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.Right-Section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.book-cover {
+    padding: 10px;
+    padding-left: 25px;
+    width: 250px;
+}
+
+.Left-Section-Description {
+    padding-top: 16px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Left-Section-Description h5 {
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.rom-cat {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.author {
+    padding-bottom: 16px;
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.profile-author {
+    width: 80px;
+    height: 80px; 
+    border-radius: 50%;
+}
+
+
+.Fav-Btn {
+    display: flex;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #E3E8EF;
+    background: #1EC0C4;
+}
+
+.Fav-Btn:hover {
+    font-weight: 800;
+    border-radius: 8px;
+    background: #1EC0C4;
+    border: 1px solid #E3E8EF;
+}
+
+.Novel {
+    display: flex;
+    padding: 16px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid #E3E8EF;
+    background: #FFF;
+}
+
+.main-title h3 {
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.secondary-title h4 {
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.Novel p {
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 180%;
+    margin-bottom: 0px;
+}
+
+.divider {
+    border: none;
+    border-top: 3px solid #1EC0C4;
+    margin: 0px;
+    height: 1px;
+    width: 100%;
+    background: #1EC0C4;
+}
+
+.back-btn {
+    display: flex;
+    padding: 10px 16px;
+    margin: 24px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #1EC0C4;
+    background: #FFF;
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    border: 1px solid #1EC0C4;
+    background: #1EC0C4;
+}
+
+.bottom-button a {
+    text-decoration: none;
+}
+
+.comments {
+    display: flex;
+    width: 1060px;
+    padding: 16px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid #E3E8EF;
+    background: #FFF;
+}
+
+.komen2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+
+.komen2 h4 {
+    margin-bottom: 0px;
+}
+
+.komen-orang {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+
+.profil-orang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.profil-description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.profil-description h4 {
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.profil-description p {
+    color: #243036;
+    margin-bottom: 0px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.isi-komen {
+    display: flex;
+    padding-left: 48px;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.isi-komen p {
+    color: #243036;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.comments h5 {
+    margin-bottom: 0px;
+}
+
+.input-comments {
+    width: 100%;
+}
+
+.input-comments textarea, .formEditComment {
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+}
+
+.formEditTextArea {
+    display: flex;
+    width: 100%;
+}
+
+.edit-comment-form {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.input-comments Button, .change-comment {
+    margin-top: 10px;
+    background-color: #1EC0C4;
+    border: none;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+}
+
+.input-comments Button:hover, .change-comment:hover, .change-comment:active {
+    background-color: #1A9EA3;
+}
+
+.change-comment {
+    margin-right: 20px;
+}
+
+.cancel-update-comment {
+    margin-top: 10px;
+    background-color: #085e5f;
+    border: none;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+}
