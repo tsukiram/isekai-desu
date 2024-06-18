@@ -46,7 +46,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'isekai_project.urls'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://isekai-desu.vercel.app",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -131,4 +131,4 @@ REST_FRAMEWORK = {
     ],
 }
 
-FRONTEND_URL = 'http://localhost:5173'
+FRONTEND_URL = 'https://isekai-desu.vercel.app/'
