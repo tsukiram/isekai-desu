@@ -7,7 +7,7 @@ function GenreOption() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/categories/')
+    fetch('https://tsukirama.pythonanywhere.com/api/categories/')
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
