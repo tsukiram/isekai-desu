@@ -1,9 +1,6 @@
-Sure, here is the raw text for the `README.md` file:
-
-```markdown
 # Isekai Desu
 
-Welcome to the Isekai Desu project! This repository contains both the backend and frontend components of the application.
+Welcome to the Isekai Desu project! This repository contains both the backend and frontend components of the application. You can access the deployed website [here](https://isekai-desu.vercel.app/).
 
 ## Table of Contents
 
@@ -23,8 +20,9 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 Make sure you have the following software installed on your system:
 
-- Python 3.x
+- Python
 - pip
+- django
 - Node.js
 - npm
 
@@ -32,30 +30,30 @@ Make sure you have the following software installed on your system:
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/tsukiram/isekai-desu/
-cd isekai-desu
-```
+    ```bash
+    git clone https://github.com/tsukiram/isekai-desu/
+    cd isekai-desu
+    ```
 
 ## Running the Backend
 
 1. Navigate to the project directory:
 
-```bash
-cd isekai-desu
-```
+    ```bash
+    cd isekai-desu
+    ```
 
 2. Install the required Python packages:
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 3. Run the Django development server:
 
-```bash
-python3 manage.py runserver
-```
+    ```bash
+    python3 manage.py runserver
+    ```
 
 The backend server should now be running at `http://127.0.0.1:8000/`.
 
@@ -63,21 +61,25 @@ The backend server should now be running at `http://127.0.0.1:8000/`.
 
 1. Navigate to the frontend directory:
 
-```bash
-cd frontend/react-app
-```
+    ```bash
+    cd frontend/react-app
+    ```
 
 2. Install the required npm packages:
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 3. Start the React development server:
 
-```bash
-npm start
-```
+    ```bash
+    npm start
+    ```
 
 The frontend server should now be running at `http://localhost:5173/`.
+
+## Contributing
+
+We welcome contributions to the project. Please fork the repository and create a pull request with your changes. Make sure to follow the existing code style and include tests for any new features or bug fixes.
 
